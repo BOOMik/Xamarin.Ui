@@ -1,0 +1,2 @@
+﻿MONO_GC_PARAMS=bridge-implementation=tarjan,nursery-size=128m,soft-heap-limit=256m
+MONO_LOG_LEVEL=error

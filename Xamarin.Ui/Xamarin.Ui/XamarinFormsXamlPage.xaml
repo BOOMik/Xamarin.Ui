@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="Xamarin.Ui.XamarinFormsXamlPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ui="clr-namespace:Xamarin.Ui.Ui;assembly=Xamarin.Ui"
+             Title="Xamarin.Forms Xaml">
+    <StackLayout Orientation="Vertical"
+                 Padding="0"
+                 Spacing="0">
+        <Label FontSize="30"
+               Text="Hello world!"
+               TextColor="Black" />
+        <Label FontSize="14"
+               Text="Xamarin Forms Xaml is work!"
+               TextColor="Lime" />
+        <StackLayout Orientation="Horizontal"
+                     Padding="0"
+                     Spacing="0">
+            <Label FontSize="14"
+                   Text="And horizontal"
+                   TextColor="Gray" />
+            <Label FontSize="10"
+                   Text=" too!"
+                   TextColor="Green" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     Padding="0"
+                     Spacing="0">
+            <Label FontSize="14"
+                   Text="And horizontal"
+                   TextColor="Gray" />
+            <Label FontSize="10"
+                   Text=" too!"
+                   TextColor="Green" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     Padding="0"
+                     Spacing="0">
+            <Label FontSize="14"
+                   Text="And horizontal"
+                   TextColor="Gray" />
+            <Label FontSize="10"
+                   Text=" too!"
+                   TextColor="Green" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     Padding="0"
+                     Spacing="0">
+            <Label FontSize="14"
+                   Text="And horizontal"
+                   TextColor="Gray" />
+            <Label FontSize="10"
+                   Text=" too!"
+                   TextColor="Green" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     Padding="0"
+                     Spacing="0">
+            <Label FontSize="14"
+                   Text="And horizontal"
+                   TextColor="Gray" />
+            <Label FontSize="10"
+                   Text=" too!"
+                   TextColor="Green" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     Padding="0"
+                     Spacing="0">
+            <Label FontSize="14"
+                   Text="And horizontal"
+                   TextColor="Gray" />
+            <Label FontSize="10"
+                   Text=" too!"
+                   TextColor="Green" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     Padding="0"
+                     Spacing="0">
+            <Label FontSize="14"
+                   Text="And horizontal"
+                   TextColor="Gray" />
+            <Label FontSize="10"
+                   Text=" too!"
+                   TextColor="Green" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     Padding="0"
+                     Spacing="0">
+            <Label FontSize="14"
+                   Text="And horizontal"
+                   TextColor="Gray" />
+            <Label FontSize="10"
+                   Text=" too!"
+                   TextColor="Green" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     Padding="0"
+                     Spacing="0">
+            <Label FontSize="14"
+                   Text="And horizontal"
+                   TextColor="Gray" />
+            <Label FontSize="10"
+                   Text=" too!"
+                   TextColor="Green" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     Padding="0"
+                     Spacing="0">
+            <Label FontSize="14"
+                   Text="And horizontal"
+                   TextColor="Gray" />
+            <Label FontSize="10"
+                   Text=" too!"
+                   TextColor="Green" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     Padding="0"
+                     Spacing="0">
+            <Label FontSize="14"
+                   Text="And horizontal"
+                   TextColor="Gray" />
+            <Label FontSize="10"
+                   Text=" too!"
+                   TextColor="Green" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

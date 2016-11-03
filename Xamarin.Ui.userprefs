@@ -1,0 +1,19 @@
+﻿<Properties StartupConfiguration="{F79A968F-7B6D-47E7-A4ED-C46623987540}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="R:\Projects\Xamarin.Ui\Xamarin.Ui\Xamarin.Ui.Droid\PageRenderer.cs" line="39" column="1" />
+      <Breakpoint file="R:\Projects\Xamarin.Ui\Xamarin.Ui\Xamarin.Ui.Droid\PageRenderer.cs" line="36" column="1" />
+      <Breakpoint file="R:\Projects\Xamarin.Ui\Xamarin.Ui\Xamarin.Ui.Droid\MainActivity.cs" line="38" column="1" />
+      <Breakpoint file="R:\Projects\Xamarin.Ui\Xamarin.Ui\Xamarin.Ui.Droid\PageRenderer.cs" line="27" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Xamarin.Ui.Droid PreferredExecutionTarget="Android.N5" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Xamarin.Ui\Xamarin.Ui.Droid\PageRenderer.cs">
+    <Files>
+      <File FileName="Xamarin.Ui\Xamarin.Ui.Droid\PageRenderer.cs" Line="43" Column="4" />
+      <File FileName="Xamarin.Ui\Xamarin.Ui.Droid\MainActivity.cs" Line="29" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+</Properties>
