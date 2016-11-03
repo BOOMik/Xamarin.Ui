@@ -29,14 +29,19 @@ namespace Xamarin.Ui.Droid.Ui.Tools
             _nativeView.Visibility = _sharedView.IsVisible ? ViewStates.Visible : ViewStates.Gone;
         }
 
-        public void UpdateProperty(Type type, string property, object value)
+        public void UpdateProperty(string property, object value)
         {
-
+            if (property == nameof(UiView.Padding)) _nativeView.SetPadding(_sharedView.Padding);
+            if (property == nameof(UiView.Margin)) _nativeView.SetMargins(_sharedView.Margin);
+            if (property == nameof(UiView.BackgroundColor)) _nativeView.SetBackgroundColor(_sharedView.BackgroundColor.ToAndroid());
+            if (property == nameof(UiView.Width)) _nativeView.SetSize(_sharedView.Width, _sharedView.Height);
+            if (property == nameof(UiView.Height)) _nativeView.SetSize(_sharedView.Width, _sharedView.Height);
+            if (property == nameof(UiView.IsVisible)) _nativeView.Visibility = _sharedView.IsVisible? ViewStates.Visible: ViewStates.Gone;
         }
-
         public T GetSharedView<T>() where T : UiView
         {
             return _sharedView as T;
         }
+
     }
 }

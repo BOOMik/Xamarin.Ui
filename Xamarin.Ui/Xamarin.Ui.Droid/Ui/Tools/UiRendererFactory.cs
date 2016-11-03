@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Android.Views;
 using Xamarin.Forms.Platform.Android;
+using Xamarin.Ui.Droid.Ui.Containers;
 using Xamarin.Ui.Droid.Ui.Views;
 using Xamarin.Ui.Ui;
 
@@ -30,8 +31,11 @@ namespace Xamarin.Ui.Droid.Ui.Tools
             var view = nativeView as View;
             if (view == null) return null;
             var nativeUiView = nativeView as INativeUiView;
+			sharedView.NativeView = nativeUiView;
 	        if (nativeUiView == null) return null;
 	        nativeUiView.ViewHelper = new UiRendererHelper(nativeUiView, view, sharedView);
+			nativeUiView.Init();
+            sharedView.SetInit();
             return view;
 
 		}

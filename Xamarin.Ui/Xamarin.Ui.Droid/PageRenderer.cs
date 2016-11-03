@@ -57,8 +57,6 @@ namespace Xamarin.Ui.Droid
 			{
 				Toast.MakeText(ViewGroup.Context, _sb.ToString(), ToastLength.Short).Show();
 			}
-            
-			
         }
 
         public static void SeeViews(ViewGroup viewGroup, int level=0)

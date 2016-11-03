@@ -60,8 +60,10 @@ namespace Xamarin.Ui.Ui
                 _bindingContext = value;
                 UpdateProperty(value);
                 SubscribeNotifyPropertyChanged();
+                OnBindingContextChanged();
             }
         }
+
 
         public Color BackgroundColor
         {
@@ -153,10 +155,12 @@ namespace Xamarin.Ui.Ui
         public UiView AddBinding(string bindingName, string propertyName)
         {
             if (string.IsNullOrEmpty(bindingName)) return this;
-            if (string.IsNullOrEmpty(propertyName))
+            var contain = Bindings.ContainsKey(propertyName);
+            if (contain) Bindings.Remove(propertyName);
+            if (!string.IsNullOrEmpty(propertyName))
             {
-                if (Bindings.ContainsKey(propertyName)) Bindings.Remove(propertyName);
-            } else Bindings.Add(bindingName, propertyName);
+                Bindings.Add(bindingName, propertyName);
+            }
             return this;
         }
 
@@ -176,10 +180,10 @@ namespace Xamarin.Ui.Ui
             if (property == null) return;
             var value = _bindingContext.GetType().GetRuntimeProperty(propertyChangedEventArgs.PropertyName)?.GetValue(_bindingContext, null);
             UpdateProperty(value, otherMember: property);
-
         }
 
-        private void UpdateProperty<T>(T value = default(T), [CallerMemberName] string member = null, string otherMember = null)
+        public virtual void OnBindingContextChanged() {}
+        public void UpdateProperty<T>(T value = default(T), [CallerMemberName] string member = null, string otherMember = null)
         {
             if (!_init) return;
             if (member == null) member = otherMember;

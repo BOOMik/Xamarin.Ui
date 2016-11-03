@@ -9,8 +9,45 @@ namespace Xamarin.Ui.Ui
 {
     public class UiLabel : UiView
     {
-        public string Text { get; set; }
-		public double TextSize { get; set; } = 14;
-		public Color TextColor { get; set; } = Color.Black;
+        private string _text;
+        private double _textSize = 14;
+        private Color _textColor = Color.Black;
+
+        public string Text
+        {
+            get { return _text; }
+            set
+            {
+                _text = value;
+                UpdateProperty(value);
+            }
+        }
+
+        public double TextSize
+        {
+            get { return _textSize; }
+            set
+            {
+                _textSize = value;
+                UpdateProperty(value);
+            }
+        }
+
+        public Color TextColor
+        {
+            get { return _textColor; }
+            set
+            {
+                _textColor = value;
+                UpdateProperty(value);
+            }
+        }
+
+
+        public string TextBinding
+        {
+            set { AddBinding(value, nameof(Text)); }
+        }
+        
     }
 }

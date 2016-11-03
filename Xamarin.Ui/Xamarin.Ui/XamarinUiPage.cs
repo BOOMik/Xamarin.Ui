@@ -12,9 +12,28 @@ namespace Xamarin.Ui
 	    {
 	        base.OnAppearing();
 	        var appearingTime = DateTime.Now - App._tapTime;
-            App.Logger($"Appearing Time for Ui: {appearingTime.TotalMilliseconds}");
+			var text = $"Appearing Time for Ui: {appearingTime.TotalMilliseconds}";
+            App.Logger(text);
+			_time.Text = text;
+			Device.StartTimer(TimeSpan.FromMilliseconds(500), () =>
+			{
+				if (appearingTime.TotalMilliseconds < 50)
+				{
+					_time.BackgroundColor = Color.Lime;
+				} else if (appearingTime.TotalMilliseconds < 100)
+				{
+					_time.BackgroundColor = Color.Yellow;
+				}
+				else 
+				{
+					_time.BackgroundColor = Color.Red;
+				}
+				return false;
+			});
         }
 
+
+		UiLabel _time;
 	    public XamarinUiPage()
 	    {
 	        Title = "Xamarin.Ui";
@@ -24,7 +43,8 @@ namespace Xamarin.Ui
 	            View = new UiStackLayout()
 	            {
 	                Orientation = UiStackOrientation.Vertical,
-	                
+					Spacing = 10,
+                    Padding = new Thickness(10),
 	                Childrens = new List<UiView>
 	                {
 	                    new UiLabel()
@@ -33,16 +53,22 @@ namespace Xamarin.Ui
 	                        TextSize = 30,
 	                        TextColor = Color.Black
 	                    },
-	                    new UiLabel()
-	                    {
-	                        Text = "New Ui for Xamarin is work!",
-	                        TextSize = 14,
-	                        TextColor = Color.Lime
-	                    },
+						new UiLabel()
+						{
+							Text = "New Ui for Xamarin is work!",
+							TextSize = 14,
+							TextColor = Color.Lime
+						},
+						new UiLabel()
+                        {
+                            Padding = new Thickness(10),
+                            Text = "time...",
+							TextSize = 20,
+						}.ToVariable(out _time),
 	                    new UiStackLayout()
 	                    {
 	                        Orientation = UiStackOrientation.Horizontal,
-	                        
+							Spacing = 50,
 	                        Childrens = new List<UiView>
 	                        {
 	                            new UiLabel()
@@ -88,7 +114,7 @@ namespace Xamarin.Ui
 	                            new UiLabel()
 	                            {
 	                                Text = "And horizontal",
-	                                TextSize = 14,
+                                    TextSize = 14,
 	                                TextColor = Color.Gray
 	                            },
 	                            new UiLabel()

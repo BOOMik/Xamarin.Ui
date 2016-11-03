@@ -20,7 +20,7 @@ namespace Xamarin.Ui.Droid.Ui.Views
             TextSize = (float)_view.TextSize;
         }
 
-	    public void UpdateProperty(Type type, string property, object value)
+	    public void UpdateProperty(string property, object value)
 	    {
 	        if (property == "Text")
 	        {
